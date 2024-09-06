@@ -11,7 +11,7 @@ on:
                       os:
                         type: string
                         description: "Systeme d'exploitation"
-                        default: 'macos-lastest'
+                        default: 'ubuntu-lastest'
                         required: true
                       surname:
                         type: string
@@ -23,7 +23,7 @@ on:
 jobs:
       # Ce workflow contient un seul job appelé “build”
       build:
-            runs-on: ${{ inputs.os || 'macos-lastest' }}
+            runs-on: ${{ inputs.os || 'ubuntu-lastest' }}
             steps:
             - uses: actions/checkout@v4 
             - name: Run a one-line script                                        
