@@ -9,22 +9,22 @@ on:
           workflow_dispatch:
                 inputs:
                       os:
-                      type: string
-                      description: "Systeme d'exploitation"
-                      options: 
-                          - monalisa
-                          - cschleiden
+                            type: string
+                            description: "Systeme d'exploitation"
+                            default: "macos-lastest"
+                            required: true
                       surname:
                         type: string
-                        description: "Systeme d'exploitation"
-                        options:
-                          - monalisa
-                          - cschleiden
+                        description: "prenom"
+                        default: "john-doe"
+                        required: true
+                        
+                        
 jobs:
       # Ce workflow contient un seul job appelé “build”
       build:
-            runs-on: macos-latest
+            runs-on: ${{ inputs.os || "macos-lastest" }}
             steps:
             - uses: actions/checkout@v4 
             - name: Run a one-line script                                        
-              run: echo Hello, World
+              run: echo Hello, ${{ inputs.surname || "john-doe" }}!
