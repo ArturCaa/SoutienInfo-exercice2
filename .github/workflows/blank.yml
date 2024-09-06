@@ -11,7 +11,7 @@ on:
                 os:
                   type: string
                   description: "Systeme d'exploitation"
-                  default: 'ubuntu-lastest'
+                  default: 'ubuntu-latest'
                   required: true
                 surname:
                   type: string
