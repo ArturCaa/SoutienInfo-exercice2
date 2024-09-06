@@ -2,23 +2,23 @@ name: Error1
 # Contrôler quand le workflow va s’exécuter
 on:
       # Déclenche le workflow quand il y a un push ou un pull request sur la branche “main”
-          push:
+      push:
             branches: [ "main" ]
-          pull_request:
+      pull_request:
             branches: [ "main" ]
-          workflow_dispatch:
-                inputs:
-                      os:
-                        type: string
-                        description: "Systeme d'exploitation"
-                        default: 'ubuntu-lastest'
-                        required: true
-                      surname:
-                        type: string
-                        description: "prenom"
-                        default: 'john-doe'
-                        required: true
-                        
+      workflow_dispatch:
+          inputs:
+                os:
+                  type: string
+                  description: "Systeme d'exploitation"
+                  default: 'ubuntu-lastest'
+                  required: true
+                surname:
+                  type: string
+                  description: "prenom"
+                  default: 'john-doe'
+                  required: true
+                              
                         
 jobs:
       # Ce workflow contient un seul job appelé “build”
