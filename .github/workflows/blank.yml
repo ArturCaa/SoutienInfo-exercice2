@@ -8,10 +8,18 @@ on:
             branches: [ "main" ]
           workflow_dispatch:
                 inputs:
-                      os: 
-                        default: "macos-latest"
+                      os:
+                      type: string
+                      description: "Systeme d'exploitation"
+                      options: 
+                          - monalisa
+                          - cschleiden
                       surname:
-                        default: "World"
+                        type: string
+                        description: "Systeme d'exploitation"
+                        options:
+                          - monalisa
+                          - cschleiden
 jobs:
       # Ce workflow contient un seul job appelé “build”
       build:
