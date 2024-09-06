@@ -7,6 +7,11 @@ on:
           pull_request:
             branches: [ "main" ]
           workflow_dispatch:
+                inputs:
+                      os: 
+                        default: "macos-latest"
+                      surname:
+                        default: "World"
 jobs:
       # Ce workflow contient un seul job appelé “build”
       build:
